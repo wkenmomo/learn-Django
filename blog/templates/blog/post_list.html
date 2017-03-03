@@ -1,8 +1,18 @@
 <html>
     <head>
-        <title>Hmm</title>
+        <title>Django Girls blog</title>
     </head>
     <body>
-        <h1>want to shit</h1>
+        <div>
+            <h1><a href="">Django Girls Blog</a></h1>
+        </div>
+
+        {% for i in posts %}
+            <div>
+                <p>published: {{ i.published_date }}</p>
+                <h1><a href=''>{{ i.title }}</a></h1>
+                <p>{{ i.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
     </body>
 </html>
